@@ -1,0 +1,85 @@
+_robin.wilken@hmmh.de_
+
+= Text Mining Keywords
+
+== Ziel
+Informationssuche und Informationsgewinnung aus Datenquellen durch Auffinden von interessanten Mustern.
+
+Schritte zur Zielgewinnung:
+
+* Routinen zur Vorverarbeitung der Datenquellen
+* Algorithmen zur Entdeckung von Mustern
+* Präsentieren bzw. Visualisieren der Ergebnisse
+
+== Natural Language Processing (NLP)
+Ist die Analyse von natürlichen Sprachen. Auf Grund der Komplexität bei der Verarbeitung wird der Vorgang in einzelne Teilvorgänge heruntergebrochen -> *NLP-Pipeline*.
+
+== Tokenisierung 
+Segmentierung von Wörtern oder Sätzen in Tokens.
+
+== non-word errors
+Tatsächlich falsch geschriebene Wörter, zB. "Ich fahre Aubo" anstelle von Auto.
+
+== real-word errors
+Falsch geschrieben Wörter, die trotzdem ein valides Wort ergeben, zB. "Ich fahre Autor" anstelle von Auto.
+
+== Stoppwort
+Wörter, die in Texten häufig verwendet werden, jedoch zu dem eigentlichen Informationsgehalt eines Textes nichts beitragen. Diese Wörter haben ausschließlich eine grammatikalische Funktion und werden daher nicht benötigt. Das Wort "das" wäre ein Beispiel für ein Stoppwort.
+
+== Part-of-Speech Tagging
+Annotieren der Wortarten von identifizierten Tokens zur Informationsgewinnung über ein Wort und dessen benachbarte Wörter.
+
+== Word-Sense Disambiguation (WSD)
+Auflösung von Mehrdeutigkeiten eines Wortes durch den Kontext.
+
+== Stemming
+Rückführung auf die Normalform eines künstlichen Worstamms. Es werden ausschließlich Wortendungen entfernt, zB. "Autos" -> "Auto".
+
+== Lemmatisierung
+Rückführung auf die Grundform (Lemma) eines Wortes durch Nachschlagen in einem Wörterbuch, zB. "fährt", "fuhr" -> Rückführung auf das Lemma "fahren".
+
+== Vektorraumdarstellung
+Umwandlung von Texten in Merkmalsvektoren.
+
+== Bag-of-Words Darstellung
+Alle Wörter eines Textes werden ein Merkmal eines Vektorraums.
+
+== Gewichtung von Wörter
+
+=== Binär
+Bildet die An- oder Abwesendheit eins Worts in einem Text ab.
+
+=== Term Frequency-Inverse Document Frequency (TFIDF)
+Statistisches Verfahren zur Wichtigkeitsbestimmung eines Wortes. TFIDF Terme haben eine hohe Gewichtung, wenn sie häufig in einer kleinen Anzahl von Texten auftauchen.
+Das Merkmalsgewicht wird durch folgende Faktoren bestimmt:
+
+* *Termhäufigkeit tf(i,j)*: Wie oft taucht ein Term j im Text i auf? 
+* *Dokumentenhäufigkeit df(j)*: Wie oft taucht ein Term j in der gesamten Textsammlung auf?
+
+== Clustering 
+Gruppierung von Objekten.
+
+=== Ähnlichkeitsfunktionen
+Geben durch einen reellen Wert an, wie ähnlich sich zwei Objekte sind. Häufigste Ähnlichkeitsfunktionen -> Euklidische Distanz, Kosinus Ähnlichkeit
+
+Zur bestimmung von Ähnlichkeiten werden Merkmale verwendet.
+
+=== feature extraction, feature selection
+
+* *feature extraction*: Generierung von Merkmalsmengen
+* *feature selection*: Herausfinden der besten Merkmale zur Ähnlichkeitsbestimmung
+
+=== Clustering Algorithmen
+
+* *partitionierend*: Teilt Objekte disjunkt ein.
+* *hierarchisch*: Erzeugt eine verschachtelte Abfolge von partitionen.
+* *hard clustering*: alle Objekte werden jeweils exakt einem Cluster zugeordnet.
+* *soft clustering*: alle Objekte können jedem Cluster zu einem gewissen Grad zugeteilt werden.
+
+Strategien von Clustering Algorithmen 
+
+* *agglomerativ*: jedes Objekt wird zu Beginn einem seperaten Cluster zugeordnet und schrittweise die Cluster miteinander vereinigt.
+* *divisiv*: alle Objekte werden einem Cluster zugeteilt und dann schrittweise aufgeteilt.
+* *shuffeling*: iterative Umverteilung der Objekte in einem Cluster.
+
+Häufig benutzter Algorithmus -> "k-means" (hart partitionierend)
